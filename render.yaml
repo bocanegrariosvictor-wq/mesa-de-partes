@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mesa-de-partes-backend
+    env: node
+    plan: free
+    repo: user/repo-name
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+  - type: web
+    name: mesa-de-partes-frontend
+    env: node
+    plan: free
+    repo: user/repo-name
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm run preview
